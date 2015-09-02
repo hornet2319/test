@@ -1,0 +1,94 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="main.odessa.news.news.DetailActivity">
+    <RelativeLayout
+        android:id="@+id/lay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include android:id="@+id/toolbar_actionbar" layout="@layout/toolbar_default"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/det_main_img"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_below="@id/toolbar_actionbar"/>
+
+        <RelativeLayout
+            android:id="@+id/lay2"
+            android:layout_below="@id/det_main_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+
+            <TextView
+                android:textSize="@dimen/det_header_textsize_land"
+                android:layout_marginTop="15dp"
+                android:id="@+id/det_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+            <View
+                android:id="@+id/View01"
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/det_header"
+                android:layout_alignParentLeft="true"
+                android:background="@color/grey_separator" />
+            <LinearLayout
+                android:id="@+id/det_linear1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/View01"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_launcher"/>
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textSize="@dimen/det_cath_textsize_land"
+                    android:id="@+id/det_cath"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <TextView
+
+                android:id="@+id/det_time"
+                android:layout_marginTop="10.5dp"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/det_time_textsize_land"
+                android:layout_height="wrap_content"
+                android:text="abc"
+                android:layout_below="@+id/View01"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <View
+
+                android:id="@+id/View02"
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/det_linear1"
+                android:layout_alignParentLeft="true"
+                android:background="@color/grey_separator" />
+            <TextView
+                android:textSize="@dimen/det_desc_textsize"
+                android:id="@+id/det_description"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/View02"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
